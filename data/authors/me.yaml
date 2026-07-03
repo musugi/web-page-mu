@@ -1,0 +1,121 @@
+schema: hugoblox/author/v1
+slug: me
+is_owner: true
+name:
+  display: Hiromu Sugiyama
+  given: Hiromu
+  family: Sugiyama
+  alternate: '杉山寛夢'
+  pronunciation: ''
+  pronouns: he/him
+postnominals: []
+status:
+  icon: "📊"
+role: Researcher
+bio: |
+  Hiromu Sugiyama is a researcher at Waseda University, Tokyo. He holds an M.A. in Public Policy
+  with a Certificate in Research Methods (MACRM) from the University of Chicago and a B.S. in
+  Human-Centered Design Engineering from the University of Washington. His research focuses on
+  conjoint experiments, bureaucratic accountability, voting systems, and multiple equilibria in
+  political institutions.
+
+affiliations:
+  - name: Waseda University
+    url: https://www.waseda.jp/top/en
+
+links:
+  - icon: at-symbol
+    url: mailto:s.muniver19@gmail.com
+    label: E-mail Me
+  - icon: brands/github
+    url: https://github.com/musugi
+    label: GitHub
+
+interests:
+  - Conjoint Experiments
+  - Bureaucratic Accountability
+  - Voting Systems
+  - Multiple Equilibria
+  - Sanctions
+
+education:
+  - degree: M.A. in Public Policy, Certificate in Research Methods (MACRM)
+    institution: University of Chicago
+    start: 2024-09-01
+    end: 2025-12-31
+  - degree: B.S. in Human-Centered Design Engineering (HCDE)
+    institution: University of Washington
+    start: 2020-09-01
+    end: 2024-06-30
+
+experience:
+  - role: Research Apprentice
+    org: "University of Chicago (Advisor: Prof. Alexander Fouirnaies)"
+    start: 2025-04-01
+    end: 2025-12-31
+    summary: |
+      Conducted large-scale data mining and cleaning of Japanese campaign expenditure records and
+      built web-scraping pipelines to collect candidate attributes for an ongoing coauthored paper
+      with Daniel M. Smith (University of Pennsylvania).
+  - role: Research Assistant
+    org: "University of Washington (Mentor: Sourojit Ghosh, PhD)"
+    start: 2023-09-01
+    end: 2024-06-30
+  - role: ICT Engineer Intern
+    org: Research & Consulting of Regional Science, Oita, Japan
+    start: 2023-08-01
+    end: 2024-09-30
+    summary: |
+      Proposed leveraging local government data and establishing a data infrastructure to execute
+      quantitative assessment of policy objectives' cost-effectiveness using robust statistical
+      causal inference techniques. Assessed impact on resident cost burden and economic outcomes
+      of health care deduction policies through MAS analysis.
+  - role: Policy Design Intern
+    org: METI, Tokyo, Japan
+    start: 2023-08-01
+    end: 2023-09-30
+    summary: |
+      Participated in a simulated policy-making process within a provisional group, contributing to
+      the design of social policies aimed at fostering industries and expanding national wealth.
+
+skills:
+  - name: Programming
+    items:
+      - label: Python
+        level: 4
+      - label: R
+        level: 4
+      - label: SQL
+        level: 3
+      - label: HTML/CSS
+        level: 3
+      - label: Java
+        level: 3
+  - name: Research & Methods
+    items:
+      - label: Web Scraping
+        level: 4
+      - label: Causal Inference
+        level: 4
+      - label: Conjoint Analysis
+        level: 4
+      - label: Object-Oriented Programming
+        level: 3
+
+languages:
+  - name: Japanese
+    level: 5
+    label: Native
+  - name: English
+    level: 4
+    label: Fluent
+
+awards:
+  - title: Scholarship Programs for Japanese Student (JASSO)
+    awarder: Japanese Government
+    date: "2024-09-01"
+    summary: September 2024 – December 2025
+  - title: Harris Master's Programs Scholarship
+    awarder: University of Chicago
+    date: "2024-09-01"
+    summary: September 2024 – December 2025
