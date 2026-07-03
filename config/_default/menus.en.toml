@@ -1,0 +1,38 @@
+# -- Main Menu --
+# Acceptable parameters are name, pageRef, page, url, title, weight.
+
+[[main]]
+  name = "About"
+  url = "/"
+  weight = 10
+
+[[main]]
+  name = "Research"
+  pageRef = "research"
+  weight = 20
+
+[[main]]
+  name = "CV"
+  pageRef = "cv"
+  weight = 30
+
+[[main]]
+  name = "Presentations"
+  pageRef = "presentations"
+  weight = 40
+
+[[main]]
+  name = "Post"
+  pageRef = "posts"
+  weight = 50
+
+[[main]]
+  name = "Contact"
+  pageRef = "contact"
+  weight = 60
+
+[[main]]
+  identifier = "search"
+  weight = 99
+  [main.params]
+    action = "search"

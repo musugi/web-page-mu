@@ -1,0 +1,20 @@
+locale = "en-US"
+label = "English"
+direction = "ltr"
+weight = 1
+
+title = "Hiromu Sugiyama"
+
+[params]
+  dateFormat = "2 January 2006"
+  mainSections = ["posts"]
+  description = "Hiromu Sugiyama's academic website — research on conjoint experiments, bureaucratic accountability, and voting systems."
+
+[params.author]
+  name = "Hiromu Sugiyama"
+  headline = "Researcher, Waseda University"
+  bio = "Researcher at Waseda University working on conjoint experiments, bureaucratic accountability, and voting systems."
+  links = [
+    { github = "https://github.com/musugi" },
+    { email = "mailto:s.muniver19@gmail.com" },
+  ]
