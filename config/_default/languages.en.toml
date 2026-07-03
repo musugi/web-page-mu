@@ -12,6 +12,7 @@ title = "Hiromu Sugiyama"
 
 [params.author]
   name = "Hiromu Sugiyama"
+  image = "img/author.jpg"
   headline = "Researcher, Waseda University"
   bio = "Researcher at Waseda University working on conjoint experiments, bureaucratic accountability, and voting systems."
   links = [

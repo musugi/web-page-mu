@@ -1,6 +1,8 @@
 ---
 title: "Research"
 description: "Research interests and working papers by Hiromu Sugiyama."
+showDate: false
+showReadingTime: false
 ---
 
 ## Research Interests

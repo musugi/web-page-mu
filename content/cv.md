@@ -1,9 +1,11 @@
 ---
 title: "CV"
 description: "Curriculum vitae of Hiromu Sugiyama."
+showDate: false
+showReadingTime: false
 ---
 
-{{< button href="/files/cv.pdf" target="_blank" >}}
+{{< button href="/web-page-mu/files/cv.pdf" target="_blank" >}}
 Download CV (PDF)
 {{< /button >}}
 
