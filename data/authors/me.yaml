@@ -49,6 +49,16 @@ education:
     end: 2024-06-30
 
 experience:
+  - role: Analytical Engineer
+    org: "VETA Inc."
+    start: 2026-05-01
+    summary: |
+      [VETA Inc.](https://www.veta.co.jp/about-veta)
+  - role: Research Assistant
+    org: "Waseda Institute of Political Economy (WINPEC)"
+    start: 2026-05-01
+    summary: |
+      [WINPEC](https://www.waseda.jp/fpse/winpec/)
   - role: Research Apprentice
     org: "University of Chicago (Advisor: Prof. Alexander Fouirnaies)"
     start: 2025-04-01
