@@ -15,6 +15,8 @@ Conjoint experiments, bureaucratic accountability, voting systems, multiple equi
 
 **with** Teppei Yamamoto, Airo Hino, Yuto Kitano, Rob Fahey, Taketo Hara
 
+{{< figure src="img/conjoint-for-vaas_fig1.png" alt="Figure 1 from Using Conjoint for Voting Advice Applications" caption="Figure 1" >}}
+
 Voting advice applications (VAAs) typically ask voters about individual policy issues and compute
 match scores with parties or candidates using additive, often arbitrarily weighted formulas. This
 approach ignores interactions between issues and can invite socially desirable responding on
