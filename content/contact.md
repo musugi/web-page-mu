@@ -5,5 +5,6 @@ showDate: false
 showReadingTime: false
 ---
 
-- **Email**: [s.muniver19@gmail.com](mailto:s.muniver19@gmail.com)
+- **Email**: [h.sugiyama5@kurenai.waseda.jp](mailto:h.sugiyama5@kurenai.waseda.jp)
+- **Email (VETA Inc.)**: [hiromu.sugiyama@veta.co.jp](mailto:hiromu.sugiyama@veta.co.jp) — for contact collaborating with VETA Inc.
 - **GitHub**: [github.com/musugi](https://github.com/musugi)
