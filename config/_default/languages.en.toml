@@ -13,7 +13,7 @@ title = "Hiromu Sugiyama"
 [params.author]
   name = "Hiromu Sugiyama"
   image = "img/author.png"
-  headline = "Researcher, Waseda University"
+  headline = "RA/Analytics Engineer, Waseda University"
   bio = "Researcher at Waseda University working on conjoint experiments, bureaucratic accountability, and voting systems."
   links = [
     { github = "https://github.com/musugi" },
