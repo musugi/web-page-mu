@@ -1,0 +1,33 @@
+{{- $images := $.Resources.ByType "image" }}
+{{- $feature := $images.GetMatch ($.Params.feature | default "*feature*") }}
+<article
+  class="group flex h-full flex-col overflow-hidden rounded-xl border border-neutral-200 bg-white transition hover:-translate-y-1 hover:shadow-lg dark:border-neutral-700 dark:bg-neutral-800"
+  style="will-change:transform;"
+>
+  <a href="{{ .Permalink }}" class="flex h-full flex-col" aria-label="{{ .Title | emojify }}">
+    {{ with $feature }}
+      <img
+        class="h-40 w-full object-cover"
+        src="{{ (.Fill "600x400 smart").Permalink }}"
+        srcset="{{ (.Fill "600x400 smart").Permalink }} 1x, {{ (.Fill "1200x800 smart").Permalink }} 2x"
+        alt=""
+        loading="lazy"
+      />
+    {{ end }}
+    <div class="flex flex-1 flex-col p-5">
+      <h3
+        class="text-lg font-semibold leading-snug text-neutral-800 group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+      >
+        {{ .Title | emojify }}
+      </h3>
+      <div class="mt-2 text-xs text-neutral-500 dark:text-neutral-400">
+        {{ partial "article-meta.html" . }}
+      </div>
+      {{ if .Params.showSummary | default ($.Site.Params.list.showSummary | default true) }}
+        <p class="prose mt-3 line-clamp-3 text-sm text-neutral-600 dark:prose-invert dark:text-neutral-400">
+          {{ .Summary | plainify }}
+        </p>
+      {{ end }}
+    </div>
+  </a>
+</article>

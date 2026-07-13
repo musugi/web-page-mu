@@ -1,0 +1,27 @@
+{{ define "main" }}
+  <header>
+    {{ if .Params.showBreadcrumbs | default (.Site.Params.list.showBreadcrumbs | default false) }}
+      {{ partial "breadcrumbs.html" . }}
+    {{ end }}
+    <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">{{ .Title }}</h1>
+  </header>
+  {{ with .Content }}
+    <section class="prose mt-4 max-w-full dark:prose-invert">
+      {{ . | emojify }}
+    </section>
+  {{ end }}
+  {{ if .Data.Pages }}
+    <section class="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {{ range (.Paginate .Pages).Pages }}
+        {{ partial "article-card.html" . }}
+      {{ end }}
+    </section>
+    {{ partial "pagination.html" . }}
+  {{ else }}
+    <section class="prose mt-10 dark:prose-invert">
+      <p class="border-t py-8">
+        <em>{{ i18n "list.no_articles" | emojify }}</em>
+      </p>
+    </section>
+  {{ end }}
+{{ end }}
