@@ -17,7 +17,7 @@ series: ["lv1-kenkyuusha-note"]
 
 [公式サイト](https://www.cambridge.org/core/journals/american-political-science-review) / [Twitter](https://x.com/apsrjournal)
 
-1906年から、アメリカ政治学会（APSA: American Political Science Association）が発行している、政治学における最も権威ある査読付き学術誌。雰囲気で言うと『攻殻機動隊』的というか、「個とは何か」「国家とは何か」を、あの密度と重厚さで問い詰めてくる感じ。士郎正宗的な密度、と言えば伝わる人には伝わるはず。
+1906年から、アメリカ政治学会（APSA: American Political Science Association）が発行している、政治学における最も権威ある査読付き学術誌。雰囲気で言うと押井守版の『攻殻機動隊』的というか、「個とは何か」「国家とは何か」を、あの密度と重厚さで問い詰めてくる感じ。（そういえば、原作遵守の新シリーズ始まりましたね〜嬉しいです）
 
 ただし格式ある分、扱っているテーマは政治学の中でもかなり大きなお題目。たとえば「カントの政治哲学とは何ぞや」的な、思想史・哲学寄りのテーマや、制度そのものを問い直すような研究にaudienceや編集者の目が向きがちです。大きなテーマに真正面から挑みたい人にはうってつけかもしれません。
 
