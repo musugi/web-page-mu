@@ -13,7 +13,7 @@ title = "Hiromu Sugiyama"
 [params.author]
   name = "Hiromu Sugiyama"
   image = "img/author.png"
-  headline = "[早稲田大学政治経済学術院現代政治経済研究所（WINPEC）リサーチアシスタント](https://www.waseda.jp/fpse/winpec/other/2025/07/01/9779/)、[株式会社VETA アナリティクスエンジニア](https://www.veta.co.jp/about-veta)"
+  headline = "[早稲田大学政治経済学術院現代政治経済研究所（WINPEC）リサーチアシスタント](https://www.waseda.jp/fpse/winpec/other/2025/07/01/9779/)、\n [株式会社VETA アナリティクスエンジニア](https://www.veta.co.jp/about-veta)"
   bio = "コンジョイント実験、官僚制のアカウンタビリティ、投票制度を研究する早稲田大学の研究者。"
   links = [
     { github = "https://github.com/musugi" },
