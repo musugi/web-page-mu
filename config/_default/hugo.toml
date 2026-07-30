@@ -4,6 +4,7 @@
 
 baseURL = "https://musugi.github.io/web-page-mu/"
 defaultContentLanguage = "en"
+hasCJKLanguage = true
 
 enableRobotsTXT = true
 summaryLength = 0

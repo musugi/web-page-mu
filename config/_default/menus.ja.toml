@@ -1,0 +1,38 @@
+# -- Main Menu --
+# Acceptable parameters are name, pageRef, page, url, title, weight.
+
+[[main]]
+  name = "概要"
+  url = "/"
+  weight = 10
+
+[[main]]
+  name = "研究"
+  pageRef = "research"
+  weight = 20
+
+[[main]]
+  name = "CV"
+  pageRef = "cv"
+  weight = 30
+
+[[main]]
+  name = "発表"
+  pageRef = "presentations"
+  weight = 40
+
+[[main]]
+  name = "投稿"
+  pageRef = "posts"
+  weight = 50
+
+[[main]]
+  name = "お問い合わせ"
+  pageRef = "contact"
+  weight = 60
+
+[[main]]
+  identifier = "search"
+  weight = 99
+  [main.params]
+    action = "search"
