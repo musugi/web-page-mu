@@ -2,4 +2,4 @@ module github.com/musugi/web-page-mu
 
 go 1.26.4
 
-require github.com/jpanther/congo/v2 v2.14.0 // indirect
+require github.com/nunocoracao/blowfish/v2 v2.105.0 // indirect

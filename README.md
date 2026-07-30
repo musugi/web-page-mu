@@ -1,11 +1,11 @@
 # web-page-mu
 
 Hiromu Sugiyama's academic website, built with [Hugo](https://gohugo.io) and the
-[Congo](https://github.com/jpanther/congo) theme, deployed to GitHub Pages.
+[Blowfish](https://blowfish.page) theme, deployed to GitHub Pages.
 
 ## Local development
 
-Requires Hugo Extended and Go (for Hugo Modules). No Node.js needed — Congo ships its
+Requires Hugo Extended and Go (for Hugo Modules). No Node.js needed — Blowfish ships its
 compiled CSS/JS assets directly.
 
 ```bash
