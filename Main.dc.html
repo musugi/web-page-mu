@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Hiromu Sugiyama — Home</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1d7a3d}a:hover{color:#11592b}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@keyframes hopA{0%{transform:translateY(0)}35%{transform:translateY(-22px) rotate(-3deg)}70%{transform:translateY(0) scaleY(.94)}100%{transform:none}}
+@keyframes hopB{0%{transform:translateY(0)}35%{transform:translateY(-22px) rotate(-3deg)}70%{transform:translateY(0) scaleY(.94)}100%{transform:none}}
+@keyframes wave{0%,100%{transform:rotate(0)}20%{transform:rotate(-14deg)}45%{transform:rotate(12deg)}70%{transform:rotate(-8deg)}}
+@keyframes waveB{0%,100%{transform:rotate(0)}20%{transform:rotate(-14deg)}45%{transform:rotate(12deg)}70%{transform:rotate(-8deg)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes slideIn{from{transform:translateY(140%)}to{transform:none}}
+@keyframes pop{from{opacity:0;transform:translateY(8px) scale(.95)}to{opacity:1;transform:none}}
+@keyframes caret{50%{opacity:0}}
+.bob{animation:bob 3.2s ease-in-out infinite}
+.hopA{animation:hopA .6s cubic-bezier(.2,.8,.2,1)}
+.hopB{animation:hopB .6s cubic-bezier(.2,.8,.2,1)}
+.avatar{transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.avatar:hover{transform:rotate(-4deg) scale(1.04)}
+.avwrap .hi{opacity:0;transform:translateY(6px) scale(.9);transition:opacity .25s,transform .25s}
+.avwrap:hover .hi,.hopA .hi,.hopB .hi{opacity:1;transform:none}
+.rv{opacity:0;animation:fadeUp .7s cubic-bezier(.2,.8,.2,1) forwards}
+.ul{text-decoration:none;background-image:linear-gradient(currentColor,currentColor);background-size:0% 2px;background-position:0 100%;background-repeat:no-repeat;transition:background-size .3s}
+.ul:hover{background-size:100% 2px}
+.nav a{color:#404040;text-decoration:none;transition:color .2s}
+.nav a:hover{color:#1d7a3d}
+.lift{transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s}
+.lift:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(0,0,0,.08)}
+.caret::after{content:"";display:inline-block;width:2px;height:1em;margin-left:3px;vertical-align:-.12em;background:currentColor;animation:caret 1s steps(1) infinite}
+.buddy{animation:slideIn .6s cubic-bezier(.2,.8,.2,1) .4s both}
+.bbtn{animation:bob 3.6s ease-in-out infinite;transition:transform .25s}
+.bbtn:hover{transform:scale(1.08) rotate(-6deg)}
+.waveA{animation:wave .7s cubic-bezier(.2,.8,.2,1)}
+.waveB{animation:waveB .7s cubic-bezier(.2,.8,.2,1)}
+.bubble{animation:pop .22s cubic-bezier(.2,.8,.2,1)}
+.icon{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;color:#404040;transition:transform .2s,color .2s,background .2s}
+.icon:hover{transform:translateY(-3px);color:#1d7a3d;background:#eaf8ee}
+</style>
+</helmet>
+<div style="min-height: 1180px; background: #ffffff; color: #171717; font-family: Inter, system-ui, sans-serif; position: relative; overflow: hidden">
+  <header class="nav" style="max-width: 1100px; margin: 0 auto; padding: 24px 32px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between">
+    <a href="Main.dc.html" style="font-weight: 800; font-size: 18px; color: #171717">Hiromu Sugiyama</a>
+    <nav style="display: flex; flex-wrap: wrap; gap: 24px; font-size: 15px; font-weight: 500; align-items: center">
+      <a href="Research.dc.html">Research</a>
+      <a href="CV.dc.html">CV</a>
+      <a href="Research.dc.html">Presentations</a>
+      <a href="Research.dc.html">Posts</a>
+      <a href="CV.dc.html">Contact</a>
+      <a href="Main.dc.html" style="padding: 4px 10px; border: 1px solid #d4d4d4; border-radius: 999px; font-size: 13px">日本語</a>
+    </nav>
+  </header>
+
+  <main style="max-width: 760px; margin: 0 auto; padding: 40px 24px 160px; display: flex; flex-direction: column; align-items: center; gap: 12px">
+    <div class="rv" style="animation-delay: 0ms; display: flex; flex-direction: column; align-items: center; gap: 12px">
+      <div class="bob">
+        <div class="{{hopClass}}">
+          <div class="avwrap" style="position: relative; display: inline-block">
+            <button type="button" onClick="{{hop}}" aria-label="Say hi to the chibi" style="padding: 0; border: 0; background: none; cursor: pointer; border-radius: 50%">
+              <img class="avatar" src="/_blob/7345ae8560b3d93fcfabefbaecf269a0" alt="Chibi illustration of Hiromu at a laptop" style="width: 160px; height: 160px; border-radius: 50%; background: #fff; box-shadow: 0 0 0 4px #2fb35c, 0 12px 30px rgba(47,179,92,.25); display: block">
+            </button>
+            <span class="hi" aria-hidden="true" style="position: absolute; top: -4px; right: -70px; padding: 5px 12px; border: 2px solid #111; border-radius: 999px; background: #c9fb8a; color: #111; font-size: 14px; font-weight: 700; white-space: nowrap; pointer-events: none">Hi there!</span>
+          </div>
+        </div>
+      </div>
+      <h1 style="margin: 12px 0 0; font-size: 40px; font-weight: 800; letter-spacing: -0.02em; text-align: center">Hiromu Sugiyama</h1>
+      <p class="{{caretClass}}" aria-label="Research Assistant at WINPEC · Data Scientist at VETA" style="margin: 0; min-height: 28px; font-size: 19px; color: #525252; text-align: center">{{typed}}</p>
+      <div style="display: flex; gap: 6px; margin-top: 4px">
+        <a class="icon" href="https://github.com/musugi" aria-label="GitHub">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.870a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+        </a>
+        <a class="icon" href="CV.dc.html" aria-label="Email">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-10 6L2 7"></path></svg>
+        </a>
+        <a class="icon" href="CV.dc.html" aria-label="CV">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M16 13H8M16 17H8"></path></svg>
+        </a>
+      </div>
+    </div>
+
+    <section style="margin-top: 32px; display: flex; flex-direction: column; gap: 18px; font-size: 17px; line-height: 1.7; color: #262626">
+      <p class="rv" style="margin: 0; animation-delay: 200ms">I am a Research Assistant at the <a class="ul" href="https://www.waseda.jp/fpse/winpec/">Waseda Institute of Political Economy (WINPEC)</a> at Waseda University, and a Data Scientist at <a class="ul" href="https://www.veta.co.jp/about-veta">VETA Inc.</a> in Tokyo.</p>
+      <p class="rv" style="margin: 0; animation-delay: 320ms">Before this, I received an <a class="ul" href="https://harris.uchicago.edu/academics/degrees/ma-public-policy-certificate-research-methods-macrm">M.A. in Public Policy with a Certificate in Research Methods (MACRM)</a> from the University of Chicago, where my work focused on voting behavior, political accountability, and quantitative methodology, and a <a class="ul" href="https://www.hcde.washington.edu/bs">B.S. in Human Centered Design &amp; Engineering</a> from the University of Washington, where I studied political bias in generative AI and quantitative and qualitative research methodology for evaluating generative AI systems.</p>
+      <p class="rv" style="margin: 0; animation-delay: 440ms">I am broadly interested in political accountability, voting systems, and the use of conjoint experiments to study political behavior. I am especially interested in how bureaucrats are held accountable, how multiple equilibria can arise in political institutions, and how formal and quantitative methods — from causal inference to survey experiments — can be applied to questions of governance and elections.</p>
+      <p class="rv" style="margin: 0; animation-delay: 560ms">Please <a class="ul" href="CV.dc.html">reach out to collaborate</a>.</p>
+    </section>
+
+    <div class="rv" style="animation-delay: 680ms; margin-top: 24px; width: 100%; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px">
+      <a class="lift" href="Research.dc.html" style="display: flex; flex-direction: column; gap: 6px; padding: 20px; border: 1px solid #e5e5e5; border-radius: 14px; color: #171717; text-decoration: none">
+        <span style="font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #1d7a3d">Working paper</span>
+        <span style="font-weight: 700; font-size: 17px">Using Conjoint for Voting Advice Applications</span>
+        <span style="font-size: 14px; color: #525252">with Yamamoto, Hino, Kitano, Fahey, Hara</span>
+      </a>
+      <a class="lift" href="Research.dc.html" style="display: flex; flex-direction: column; gap: 6px; padding: 20px; border: 1px solid #e5e5e5; border-radius: 14px; color: #171717; text-decoration: none">
+        <span style="font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #1d7a3d">Talk</span>
+        <span style="font-weight: 700; font-size: 17px">Statistical Summer Seminar, Japan, 2026</span>
+        <span style="font-size: 14px; color: #525252">Presentations →</span>
+      </a>
+    </div>
+  </main>
+
+  <div class="buddy" style="position: absolute; left: 20px; bottom: 20px; display: flex; flex-direction: column; align-items: flex-start; gap: 10px">
+    <sc-if value="{{bubbleOpen}}" hint-placeholder-val="{{ true }}">
+      <div class="bubble" style="position: relative; max-width: 240px; padding: 12px 14px; border: 2px solid #111; border-radius: 14px; background: #fff; color: #111; font-size: 14px; line-height: 1.4; box-shadow: 4px 4px 0 #2fb35c">
+        <p style="margin: 0 0 6px">{{line}}</p>
+        <a href="CV.dc.html" style="font-weight: 700; color: #1d7a3d">Say hello →</a>
+        <span style="position: absolute; left: 22px; bottom: -9px; width: 14px; height: 14px; background: #fff; border-right: 2px solid #111; border-bottom: 2px solid #111; transform: rotate(45deg)"></span>
+      </div>
+    </sc-if>
+    <button type="button" class="bbtn" onClick="{{talk}}" aria-label="Chat with the chibi" style="width: 64px; height: 64px; padding: 0; border: 2px solid #111; border-radius: 50%; background: #fff; box-shadow: 0 6px 18px rgba(0,0,0,.18); cursor: pointer; overflow: hidden">
+      <img class="{{waveClass}}" src="/_blob/3c7791e80f2e442f3e3ae2a70308bc22" alt="" style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 15%">
+    </button>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":1180}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { hops: 0, n: 0, open: true, idx: 0, waves: 0 };
+    this.full = 'Research Assistant at WINPEC · Data Scientist at VETA';
+    this.lines = ["Hi! I'm Hiromu.", 'Want to talk conjoint experiments?', "I'm building a conjoint-based voting advice app.", 'Coding with coffee, as usual…', 'Always happy to collaborate!'];
+  }
+  componentDidMount() {
+    this.timer = setInterval(() => {
+      if (this.state.n >= this.full.length) { clearInterval(this.timer); return; }
+      this.setState({ n: this.state.n + 1 });
+    }, 45);
+  }
+  componentWillUnmount() { clearInterval(this.timer); }
+  renderVals() {
+    const s = this.state;
+    const done = s.n >= this.full.length;
+    return {
+      typed: this.full.slice(0, s.n),
+      caretClass: done ? '' : 'caret',
+      hopClass: s.hops === 0 ? '' : (s.hops % 2 ? 'hopA' : 'hopB'),
+      hop: () => this.setState({ hops: s.hops + 1 }),
+      bubbleOpen: s.open,
+      line: this.lines[s.idx % this.lines.length],
+      waveClass: s.waves === 0 ? '' : (s.waves % 2 ? 'waveA' : 'waveB'),
+      talk: () => this.setState({ open: true, idx: s.open ? s.idx + 1 : s.idx, waves: s.waves + 1 })
+    };
+  }
+}
+</script>
+</body>
+</html>
