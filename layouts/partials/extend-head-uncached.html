@@ -1,0 +1,18 @@
+{{/* Rendered per page (not cached): page kind + language for the chibi script. */}}
+{{ $ja := eq .Site.Language.Lang "ja" }}
+{{ $lines := slice "Hi! I'm Hiromu." "Want to talk conjoint experiments?" "I'm building a conjoint-based voting advice app." "Coding with coffee, as usual…" "Always happy to collaborate!" }}
+{{ if $ja }}
+  {{ $lines = slice "こんにちは！Hiromuです。" "コンジョイント実験について話しませんか？" "投票支援アプリ（VAA）の研究をしています。" "コーヒー片手にコーディング中…" "共同研究のご相談、大歓迎です！" }}
+{{ end }}
+{{ $cfg := dict
+  "kind" .Kind
+  "lang" .Site.Language.Lang
+  "head" ("img/chibi/chibi-head.png" | relURL)
+  "full" ("img/chibi/chibi.png" | relURL)
+  "hello" (cond $ja "こんにちは！" "Hi there!")
+  "lines" $lines
+  "contactUrl" ("contact/" | relLangURL)
+  "contactLabel" (cond $ja "連絡する →" "Say hello →")
+  "buddyLabel" (cond $ja "ちびキャラと話す" "Chat with the chibi")
+}}
+<script>window.__chibi = {{ $cfg }};</script>

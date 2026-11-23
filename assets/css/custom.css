@@ -1,0 +1,321 @@
+/* ===== Chibi + motion layer (Blowfish auto-loads assets/css/custom.css) ===== */
+
+:root {
+  --chibi-green: #2fb35c;
+  --chibi-lime: #c9fb8a;
+  --chibi-ink: #111;
+  --chibi-ease: cubic-bezier(.2, .8, .2, 1);
+}
+
+/* ---------- Scroll reveal ---------- */
+.js-motion .reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity .6s var(--chibi-ease), transform .6s var(--chibi-ease);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+.js-motion .reveal.is-visible { opacity: 1; transform: none; }
+
+/* ---------- Links & lists: gentle hover motion ---------- */
+.prose a:not(.chibi-bubble-link) {
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 2px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size .3s var(--chibi-ease);
+}
+.prose a:hover, .prose a:focus-visible { background-size: 100% 2px; }
+
+.prose ul > li { transition: transform .25s var(--chibi-ease); }
+.prose ul > li:hover { transform: translateX(4px); }
+
+.prose figure img {
+  transition: transform .5s var(--chibi-ease), box-shadow .5s var(--chibi-ease);
+  border-radius: .5rem;
+}
+.prose figure:hover img { transform: scale(1.015); box-shadow: 0 10px 30px rgba(0,0,0,.12); }
+
+/* ---------- Homepage avatar ---------- */
+.chibi-avatar-wrap {
+  position: relative;
+  display: inline-block;
+  animation: chibi-bob 3.2s ease-in-out infinite;
+}
+.chibi-avatar.rounded-full {
+  background: #fff;
+  box-shadow: 0 0 0 4px var(--chibi-green), 0 12px 30px rgba(47,179,92,.25);
+}
+.chibi-avatar {
+  cursor: pointer;
+  transition: transform .35s var(--chibi-ease);
+}
+.chibi-avatar:hover { transform: rotate(-4deg) scale(1.04); }
+.chibi-avatar:focus-visible { outline: 3px solid var(--chibi-ink); outline-offset: 6px; }
+
+.chibi-avatar-bubble {
+  position: absolute;
+  top: -6px;
+  right: -64px;
+  padding: .3rem .7rem;
+  border: 2px solid var(--chibi-ink);
+  border-radius: 999px;
+  background: var(--chibi-lime);
+  color: var(--chibi-ink);
+  font-size: .85rem;
+  font-weight: 700;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(6px) scale(.9);
+  pointer-events: none;
+  transition: opacity .25s, transform .25s var(--chibi-ease);
+}
+.chibi-avatar-wrap:hover .chibi-avatar-bubble,
+.chibi-avatar-wrap.is-hopping .chibi-avatar-bubble { opacity: 1; transform: none; }
+.chibi-avatar-wrap.is-hopping { animation: chibi-hop .6s var(--chibi-ease); }
+
+/* Typewriter caret */
+.typewriter::after {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  margin-left: 3px;
+  vertical-align: -0.12em;
+  background: currentColor;
+  animation: chibi-caret 1s steps(1) infinite;
+}
+.typewriter-done::after { display: none; }
+
+/* ---------- Chibi next to page titles ---------- */
+h1.has-chibi { display: flex; align-items: center; gap: .6rem; }
+.chibi-title {
+  width: 44px;
+  height: 44px;
+  flex: none;
+  margin: 0 !important;
+  transform-origin: 50% 90%;
+  animation: chibi-peek .8s var(--chibi-ease) both, chibi-tilt 4s ease-in-out 1s infinite;
+}
+
+/* ---------- Floating buddy (bottom-left; Blowfish's scroll-to-top stays bottom-right) ---------- */
+.chibi-buddy {
+  position: fixed;
+  left: 1rem;
+  bottom: 1rem;
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: .5rem;
+  transform: translateY(140%);
+  transition: transform .6s var(--chibi-ease);
+}
+.chibi-buddy.is-in { transform: none; }
+
+.chibi-buddy-btn {
+  width: 64px;
+  height: 64px;
+  padding: 0;
+  border: 2px solid var(--chibi-ink);
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,.18);
+  cursor: pointer;
+  overflow: hidden;
+  animation: chibi-bob 3.6s ease-in-out infinite;
+  transition: transform .25s var(--chibi-ease);
+}
+.chibi-buddy-btn img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 15%; }
+.chibi-buddy-btn:hover { transform: scale(1.08) rotate(-6deg); }
+.chibi-buddy-btn:focus-visible { outline: 3px solid var(--chibi-green); outline-offset: 3px; }
+.chibi-buddy-btn.is-waving { animation: chibi-wave .7s var(--chibi-ease); }
+
+.chibi-bubble {
+  position: relative;
+  max-width: 240px;
+  padding: .75rem .9rem;
+  border: 2px solid var(--chibi-ink);
+  border-radius: 14px;
+  background: #fff;
+  color: var(--chibi-ink);
+  font-size: .9rem;
+  line-height: 1.4;
+  box-shadow: 4px 4px 0 var(--chibi-green);
+  opacity: 0;
+  transform: translateY(8px) scale(.95);
+  transform-origin: 20px 100%;
+  transition: opacity .22s, transform .22s var(--chibi-ease);
+}
+.chibi-bubble.is-open { opacity: 1; transform: none; }
+.chibi-bubble::after {
+  content: "";
+  position: absolute;
+  left: 22px;
+  bottom: -9px;
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  border-right: 2px solid var(--chibi-ink);
+  border-bottom: 2px solid var(--chibi-ink);
+  transform: rotate(45deg);
+}
+.chibi-bubble-text { margin: 0 0 .35rem; }
+.chibi-bubble-link { color: #1d7a3d; font-weight: 700; text-decoration: underline; }
+
+/* ---------- Reading progress ---------- */
+.chibi-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  z-index: 100;
+  background: var(--chibi-green);
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+}
+
+/* ---------- 404 ---------- */
+.chibi-404 { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1rem; padding: 2rem 0 4rem; }
+.chibi-404-stage { position: relative; width: min(360px, 80vw); }
+.chibi-404-stage img { width: 100%; height: auto; animation: chibi-bob 3s ease-in-out infinite; }
+.chibi-404-q {
+  position: absolute;
+  top: -8%;
+  right: 4%;
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--chibi-green);
+  animation: chibi-wobble 1.8s ease-in-out infinite;
+}
+.chibi-404-code { font-family: var(--sg-serif, Georgia, serif); font-size: clamp(3.5rem, 10vw, 6rem); font-weight: 400; line-height: 1; margin: 0; letter-spacing: -.02em; }
+.chibi-404-btn {
+  display: inline-block;
+  padding: .7rem 1.4rem;
+  border: 1px solid var(--chibi-ink);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--chibi-ink) !important;
+  font-size: .85rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-decoration: none !important;
+  transition: background .25s, color .25s, transform .25s var(--chibi-ease);
+}
+.chibi-404-btn:hover { background: var(--chibi-ink); color: #fff !important; transform: translateY(-2px); }
+
+/* ---------- Keyframes ---------- */
+@keyframes chibi-bob   { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+@keyframes chibi-hop   { 0% { transform: translateY(0); } 35% { transform: translateY(-22px) rotate(-3deg); } 70% { transform: translateY(0) scaleY(.94); } 100% { transform: none; } }
+@keyframes chibi-wave  { 0%,100% { transform: rotate(0); } 20% { transform: rotate(-14deg); } 45% { transform: rotate(12deg); } 70% { transform: rotate(-8deg); } }
+@keyframes chibi-tilt  { 0%,100% { transform: rotate(0); } 50% { transform: rotate(-6deg); } }
+@keyframes chibi-peek  { from { opacity: 0; transform: translateY(10px) scale(.6); } to { opacity: 1; transform: none; } }
+@keyframes chibi-wobble{ 0%,100% { transform: rotate(-8deg); } 50% { transform: rotate(10deg) translateY(-6px); } }
+@keyframes chibi-caret { 50% { opacity: 0; } }
+
+/* Dark mode tweaks */
+.dark .chibi-avatar.rounded-full, .dark .chibi-buddy-btn { box-shadow: 0 0 0 4px var(--chibi-green), 0 8px 24px rgba(0,0,0,.5); }
+
+/* Mobile: keep the buddy small and out of the way */
+@media (max-width: 640px) {
+  .chibi-buddy-btn { width: 52px; height: 52px; }
+  .chibi-avatar-bubble { right: -40px; }
+  .chibi-title { width: 34px; height: 34px; }
+}
+
+/* ---------- Respect reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .js-motion .reveal { opacity: 1; transform: none; }
+}
+
+/* =====================================================================
+   Editorial white theme — airy, numbered sections, serif display type.
+   ===================================================================== */
+:root {
+  --sg-ink: #141414;
+  --sg-muted: #5c5c5c;
+  --sg-line: #e6e8e3;
+  --sg-link: #1d7a3d;
+  --sg-serif: "Newsreader", "Shippori Mincho", "Hiragino Mincho ProN", Georgia, serif;
+  --sg-sans: "Inter", "Noto Sans JP", system-ui, sans-serif;
+}
+
+/* Type */
+:root body { font-family: var(--sg-sans); color: var(--sg-ink); letter-spacing: .005em; }
+:root:lang(ja) body { letter-spacing: .04em; line-height: 1.9; }
+/* Serif titles on inner pages only; the homepage keeps the original profile header */
+:root main h1.mt-0, :root main h1.mt-5, :root .article-content h2, :root .article-content h3 { font-family: var(--sg-serif); font-weight: 500; letter-spacing: -.01em; }
+:root main h1.mt-0, :root main h1.mt-5 { font-size: clamp(2.2rem, 4vw, 3rem); }
+:root .prose { color: #262626; }
+:root .prose a { color: var(--sg-link); font-weight: 500; }
+
+/* Background: plain white (as in v1) */
+:root:not(.dark) body { background-color: #ffffff; }
+
+/* Header: spaced, uppercase, quiet */
+:root header nav a, :root header .text-base.font-medium {
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+/* Numbered h2 on inner pages (01, 02, …) with a hairline */
+:root .article-content { counter-reset: sg-sec; }
+:root .article-content > h2 {
+  display: flex;
+  align-items: baseline;
+  gap: .9rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--sg-line);
+}
+:root .article-content > h2::before {
+  counter-increment: sg-sec;
+  content: counter(sg-sec, decimal-leading-zero);
+  font-family: var(--sg-sans);
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  color: var(--sg-link);
+}
+
+/* Skills with icons (CV) */
+.sg-skills { display: flex; flex-wrap: wrap; gap: .6rem; margin: .6rem 0 1.6rem; padding: 0; list-style: none; }
+.sg-skill {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  padding: .5rem .9rem .5rem .7rem;
+  border: 1px solid var(--sg-line);
+  border-radius: 999px;
+  background: #fff;
+  font-size: .92rem;
+  font-weight: 500;
+  transition: transform .25s var(--chibi-ease), border-color .25s, color .25s;
+}
+.sg-skill:hover { transform: translateY(-2px); border-color: var(--chibi-green); color: var(--sg-link); }
+.sg-skill-icon .icon, .sg-skill-icon svg { width: 18px; height: 18px; display: block; }
+.dark .sg-skill { background: transparent; border-color: #404040; color: inherit !important; }
+
+/* Blowfish button shortcode: quiet ink outline instead of solid blue.
+   Its utilities are !important inside a cascade layer, so we retint them through their variables. */
+:root:not(.dark) .prose a[role="button"].bg-primary-600 {
+  --color-primary-600: 255, 255, 255;
+  --color-primary-500: 20, 20, 20;
+  --color-neutral: 20, 20, 20;
+  --radius-md: 999px;
+  display: inline-flex;
+  align-items: center;
+  padding: .65rem 1.3rem;
+  border: 1px solid var(--sg-ink);
+  font-size: .85rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  transition: background-color .25s, color .25s, transform .25s var(--chibi-ease);
+}
+:root:not(.dark) .prose a[role="button"].bg-primary-600:hover {
+  --color-neutral: 255, 255, 255;
+  transform: translateY(-2px);
+}

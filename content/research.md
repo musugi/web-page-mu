@@ -13,7 +13,7 @@ Conjoint experiments, bureaucratic accountability, voting systems, multiple equi
 
 ### Using Conjoint for Voting Advice Applications
 
-**with** Teppei Yamamoto, Airo Hino, Yuto Kitano, Rob Fahey, Taketo Hara
+**with** [Teppei Yamamoto](https://www.waseda.jp/fpse/faculty-en/2024/06/01/2566/), [Airo Hino](https://www.waseda.jp/fpse/faculty-en/2019/08/15/776/), Yuto Kitano, [Rob Fahey](https://robfahey.github.io/), Taketo Hara
 
 {{< figure src="img/conjoint-for-vaas_fig1.png" alt="Figure 1 from Using Conjoint for Voting Advice Applications" caption="Figure 1" >}}
 
@@ -22,7 +22,7 @@ match scores with parties or candidates using additive, often arbitrarily weight
 approach ignores interactions between issues and can invite socially desirable responding on
 sensitive topics such as gender and ethnicity. We propose a conjoint-based VAA that instead
 presents voters with bundled policy packages and asks which hypothetical party or candidate they
-would support, capturing both the direction and intensity of preferences (Bansak et al. 2023)
+would support, capturing both the direction and intensity of preferences ([Bansak et al. 2023](https://doi.org/10.1017/pan.2022.16))
 while drawing on established conjoint analysis methods. The central challenge is producing an
 individual match score immediately after a single round of responses, without the repeated-choice
 data typical conjoint analysis relies on. We develop a new algorithm that computes a voter's

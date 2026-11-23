@@ -1,0 +1,4 @@
+# In config/_default/languages.en.toml
+[params.author]
+  image = "img/author.png"
+  headline = "Research Assistant at WINPEC · Data Scientist at VETA"

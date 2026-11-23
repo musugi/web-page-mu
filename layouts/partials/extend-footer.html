@@ -1,0 +1,3 @@
+{{/* Cached by Blowfish: only load the script here. Page-specific config is in extend-head-uncached.html. */}}
+{{ $js := resources.Get "js/chibi-motion.js" | resources.Minify | resources.Fingerprint }}
+<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>

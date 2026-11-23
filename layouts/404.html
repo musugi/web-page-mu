@@ -1,0 +1,15 @@
+{{ define "main" }}
+{{ $ja := eq .Site.Language.Lang "ja" }}
+<section class="chibi-404">
+  <div class="chibi-404-stage">
+    <img src="{{ "img/chibi/chibi.png" | relURL }}" alt="{{ cond $ja "困っているちびキャラ" "A puzzled chibi at a laptop" }}" width="882" height="570">
+    <span class="chibi-404-q" aria-hidden="true">?</span>
+  </div>
+  <p class="chibi-404-code">404</p>
+  <h1 class="text-2xl font-extrabold">{{ cond $ja "ページが見つかりませんでした" "This page wandered off" }}</h1>
+  <p class="text-neutral-500 dark:text-neutral-400">
+    {{ cond $ja "お探しのページは移動または削除された可能性があります。" "The page you're looking for may have moved or never existed." }}
+  </p>
+  <a class="chibi-404-btn" href="{{ "/" | relLangURL }}">{{ cond $ja "ホームへ戻る" "Back to home" }}</a>
+</section>
+{{ end }}

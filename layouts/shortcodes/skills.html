@@ -1,0 +1,13 @@
+{{/* Usage: {{< skills "python|Python" "rust|Rust" >}}
+     Icon files live in assets/icons/lang-<key>.svg (Simple Icons, CC0). */}}
+<ul class="sg-skills not-prose">
+  {{ range .Params }}
+    {{ $parts := split . "|" }}
+    {{ $key := index $parts 0 }}
+    {{ $name := $key }}{{ if gt (len $parts) 1 }}{{ $name = index $parts 1 }}{{ end }}
+    <li class="sg-skill">
+      <span class="sg-skill-icon">{{ partial "icon.html" (print "lang-" $key) }}</span>
+      <span class="sg-skill-name">{{ $name }}</span>
+    </li>
+  {{ end }}
+</ul>

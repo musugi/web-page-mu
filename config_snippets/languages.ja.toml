@@ -1,0 +1,4 @@
+# In config/_default/languages.ja.toml (if you have one)
+[params.author]
+  image = "img/author.png"
+  headline = "早稲田大学WINPEC リサーチアシスタント・株式会社VETA データサイエンティスト"
